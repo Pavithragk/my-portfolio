@@ -1117,4 +1117,48 @@ section{
 .timeline::before {
   box-shadow: 0 0 10px #000000;
 }
+/* ===== MOBILE RESPONSIVE FIX ===== */
 
+@media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-container .content,
+  .main-container .image {
+    width: 100%;
+  }
+
+  /* Project Grid Fix */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Experience Timeline Fix */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .exp-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  .exp-item::before {
+    left: 10px !important;
+  }
+
+}
